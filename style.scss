@@ -1,0 +1,74 @@
+@import url('http://fonts.cdnfonts.com/css/cera-round-pro');
+$border-radius: 16px;
+%style {
+    padding: 8px;
+    height: 40px;
+    border: 0.5px solid black;
+    border-radius: $border-radius / 2;
+    &:focus {
+        outline: none;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cera Round Pro", "Microsoft JhengHei", "微軟正黑體", sans-serif;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    cursor: context-menu;
+    list-style: none;
+    -webkit-user-drag: none;
+}
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-size: 100% 100%;
+}
+.container {
+    padding: 20px;
+    text-align: center;
+    border-radius: $border-radius;
+    background-color: rgb(227,218,201);
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.5);
+    .bi-currency-exchange {
+        font-size: 30px;
+        color: rgb(51,51,51);
+    }
+    .bi-arrow-down-up {
+        padding: 5px;
+        background-color: rgb(255, 255, 255);
+    }
+    .selection {
+        margin: 20px 30px;
+        select {
+            margin-right: 30px;
+            @extend %style;
+        }
+        input {
+            width: 250px;
+            text-align: right;
+            @extend %style;
+        }
+        div {
+            text-align: right;
+            font-size: 14px;
+            color: rgba(51,51,51,0.8);
+        }
+    }
+    button {
+        margin-bottom: 15px;
+        padding: 5px 8px;
+        font-size: 20px;
+        border: 0.5px solid black;
+        border-radius: $border-radius / 2;
+        cursor: pointer;
+        i {
+            margin-left: 5px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
